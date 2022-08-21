@@ -11,47 +11,49 @@
 
 <body>
     <header>
-        <h1 class="text-5xl text-center mt-6">Let's get some
-            <span class="font-semibold text-violet-600">Moooooooney</span>!!!
+        <h1 class="text-5xl text-center mt-4">Let's get some
+            <span class="text-red-500 font-medium">Moooooooney</span>!!!
         </h1>
     </header>
+
     <main>
-        <section class="mt-12">
-            <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto text-white">
-                <div class="bg-green-400 p-8 rounded-xl">
-                    <h4 class="text-2xl">Deposit</h4>
-                    <h2 class="text-5xl">$<span id="deposit-total">00</span></h2>
+        <!-- balance and transaction summary -->
+        <section class="mt-8">
+            <div class="grid grid-cols-3 gap-4 w-3/4 mx-auto text-white">
+                <div class="bg-green-400 p-8 rounded-lg">
+                    <h4 class="text-3xl">Deposit</h4>
+                    <h2 class="text-5xl font-medium">$<span id="deposit-total">00</span></h2>
                 </div>
 
-                <div class="bg-yellow-500 p-8 rounded-xl">
-                    <h4 class="text-2xl">Withdraw</h4>
-                    <h2 class="text-5xl">$<span id="withdraw-total">00</span></h2>
+                <div class="bg-red-400 p-8 rounded-lg">
+                    <h4 class="text-3xl">Withdraw</h4>
+                    <h2 class="text-5xl font-medium">$<span id="withdraw-total">00</span></h2>
                 </div>
 
-                <div class="bg-violet-400 p-8 rounded-xl">
-                    <h4 class="text-2xl">Balance</h4>
-                    <h2 class="text-5xl">$<span id="balance-total">1000</span></h2>
+                <div class="bg-blue-400 p-8 rounded-lg">
+                    <h4 class="text-3xl">Balance</h4>
+                    <h2 class="text-5xl font-medium">$<span id="balance-total">1000</span></h2>
                 </div>
             </div>
         </section>
 
-        <!-- deposit and Withdraw -->
-        <section class="mt-12">
-            <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto">
-                <div class="bg-fuchsia-400 p-8 rounded-xl">
-                    <h4 class="text-2xl mb-4  text-white">Please Deposit</h4>
-                    <input id="deposit-field" class="w-9/12 block mb-2 px-3" type="text" name=""
-                        placeholder="$ Amount you want to deposit">
+        <!-- deposit and Withdraw section -->
+        <section class="mt-8 w-3/4 mx-auto">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-violet-400 p-8 rounded-lg">
+                    <h3 class="text-4xl text-white mb-4">Your Deposit</h3>
+                    <input id="deposit-field" class="w-full px-4 py-3 rounded block" type="text"
+                        placeholder="$ Amount  you want to deposit">
                     <button id="btn-deposit"
-                        class="bg-amber-600 hover:bg-sky-700 px-8 py-2 text-white font-medium rounded-lg">Deposit</button>
+                        class="bg-blue-800 px-6 py-2 text-white rounded-lg mt-4 font-medium hover:bg-blue-600">Deposit</button>
                 </div>
 
-                <div class="bg-sky-400 p-8 rounded-xl">
-                    <h4 class="text-2xl mb-4  text-white">Please Withdraw</h4>
-                    <input id="withdraw-field" class="block w-9/12 px-3 mb-2" type="text"
-                        placeholder="$ Amount you want to withdraw">
+                <div class="bg-amber-400 p-8 rounded-lg">
+                    <h3 class="text-4xl text-white mb-4">Your Withdraw</h3>
+                    <input id="withdraw-field" class="w-full px-4 py-3 rounded block" type="text"
+                        placeholder="$ Amount  you want to deposit">
                     <button id="btn-withdraw"
-                        class="bg-amber-600 px-8 py-2 rounded-lg font-medium hover:bg-yellow-500">Withdraw</button>
+                        class="bg-blue-800 px-6 py-2 text-white rounded-lg mt-4 font-medium hover:bg-blue-600">Withdraw</button>
                 </div>
             </div>
         </section>
@@ -64,6 +66,7 @@
         </div>
     </main>
 
+    <script src="js/utilities.js"></script>
     <script src="js/deposit.js"></script>
     <script src="js/withdraw.js"></script>
     <script src="js/logout.js"></script>
